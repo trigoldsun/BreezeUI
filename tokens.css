@@ -1,0 +1,251 @@
+/* ============================================================
+   BreezeUI Design Tokens — 明亮清新风 CSS v1.0.0
+   Date: 2026-04-20
+   Output: Hermes01
+   Design: 清晨微风 — 轻盈通透、温暖自然、清新明亮
+   ============================================================ */
+
+/* Google Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ============================================================
+   1. ROOT VARIABLES
+   ============================================================ */
+:root {
+  /* ── Background Colors (云白·天青·薄荷系) ── */
+  --breeze-bg-primary:    #F8FAFE;   /* 远天云白 */
+  --breeze-bg-secondary:  #EEF3FA;   /* 淡青灰 */
+  --breeze-bg-elevated:   #FFFFFF;   /* 纯白卡片 */
+  --breeze-bg-overlay:    #DDE5F0;   /* 遮罩灰 */
+  --breeze-bg-input:      #F0F5FC;   /* 输入框底 */
+  --breeze-bg-hover:      #E8F0FB;   /* 悬浮态 */
+  --breeze-bg-active:     #DDE8F5;   /* 激活态 */
+  --breeze-bg-subtle:     #F5F8FE;   /* 极淡背景 */
+
+  /* ── Accent Colors (清澈明亮) ── */
+  --breeze-accent-primary:     #4A9FFF;   /* 天蓝 — 主强调 */
+  --breeze-accent-secondary:   #36D399;   /* 薄荷绿 — 次强调 */
+  --breeze-accent-tertiary:    #FF9F43;   /* 柔和橙 — 点缀 */
+  --breeze-accent-warm:        #FF6B9D;   /* 樱粉 — 温暖 */
+
+  /* ── Functional Colors ── */
+  --breeze-success:  #22C55E;   /* 清新绿 */
+  --breeze-warning:  #F59E0B;   /* 暖黄 */
+  --breeze-danger:   #EF4444;   /* 柔和红 */
+  --breeze-info:     #4A9FFF;   /* 天蓝信息 */
+
+  /* ── Pastel Variants ── */
+  --breeze-pastel-blue:   #DBEAFE;   /* 淡蓝背景 */
+  --breeze-pastel-green: #D1FAE5;   /* 淡绿背景 */
+  --breeze-pastel-orange:#FEF3C7;   /* 淡橙背景 */
+  --breeze-pastel-pink:  #FCE7F3;   /* 淡粉背景 */
+  --breeze-pastel-gray:  #F1F5F9;   /* 淡灰背景 */
+
+  /* ── Text Colors ── */
+  --breeze-text-primary:   #1E3A5F;   /* 深青文字 */
+  --breeze-text-secondary: #5A7A9A;   /* 次级青灰 */
+  --breeze-text-tertiary:  #94A8BE;   /* 占位/禁用 */
+  --breeze-text-inverse:   #FFFFFF;   /* 反色文字 */
+  --breeze-text-link:      #4A9FFF;   /* 链接 */
+  --breeze-text-muted:     #7C9AB8;   /* 弱化文字 */
+
+  /* ── Border Colors ── */
+  --breeze-border:       rgba(74,159,255,0.15);
+  --breeze-border-hover: rgba(74,159,255,0.4);
+  --breeze-border-focus: #4A9FFF;
+  --breeze-border-active: rgba(54,211,153,0.5);
+  --breeze-border-subtle: rgba(74,159,255,0.08);
+
+  /* ── Glow / Soft Shadows ── */
+  --breeze-glow-primary:   0 4px 16px rgba(74,159,255,0.25);
+  --breeze-glow-secondary: 0 4px 16px rgba(54,211,153,0.2);
+  --breeze-glow-success:   0 4px 12px rgba(34,197,94,0.25);
+  --breeze-glow-warning:   0 4px 12px rgba(245,158,11,0.25);
+  --breeze-glow-danger:    0 4px 12px rgba(239,68,68,0.25);
+  --breeze-glow-warm:      0 4px 16px rgba(255,107,157,0.2);
+
+  /* ── Shadows (柔和轻盈) ── */
+  --breeze-shadow-xs:     0 1px 2px rgba(30,58,95,0.05);
+  --breeze-shadow-sm:     0 2px 6px rgba(30,58,95,0.08);
+  --breeze-shadow-md:     0 4px 16px rgba(30,58,95,0.1);
+  --breeze-shadow-lg:     0 8px 28px rgba(30,58,95,0.12);
+  --breeze-shadow-xl:     0 16px 48px rgba(30,58,95,0.15);
+  --breeze-shadow-inner:  inset 0 1px 3px rgba(30,58,95,0.06);
+  --breeze-shadow-float:  0 8px 32px rgba(30,58,95,0.12);
+
+  /* ── Typography ── */
+  --breeze-font-display: 'Nunito', 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+  --breeze-font-body:    'DM Sans', 'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB', system-ui, sans-serif;
+  --breeze-font-mono:    'JetBrains Mono', 'Fira Code', 'Source Code Pro', monospace;
+
+  /* Font sizes */
+  --breeze-text-2xs:   0.625rem;    /* 10px */
+  --breeze-text-xs:    0.75rem;     /* 12px */
+  --breeze-text-sm:    0.875rem;    /* 14px */
+  --breeze-text-base:  1rem;        /* 16px */
+  --breeze-text-lg:    1.125rem;    /* 18px */
+  --breeze-text-xl:    1.25rem;     /* 20px */
+  --breeze-text-2xl:   1.5rem;      /* 24px */
+  --breeze-text-3xl:   2rem;        /* 32px */
+  --breeze-text-4xl:   2.5rem;      /* 40px */
+  --breeze-text-5xl:   3rem;        /* 48px */
+
+  /* Font weights */
+  --breeze-font-light:    300;
+  --breeze-font-normal:   400;
+  --breeze-font-medium:   500;
+  --breeze-font-semibold: 600;
+  --breeze-font-bold:     700;
+
+  /* Line heights */
+  --breeze-leading-none:    1;
+  --breeze-leading-tight:  1.25;
+  --breeze-leading-snug:   1.375;
+  --breeze-leading-normal: 1.5;
+  --breeze-leading-relaxed:1.625;
+  --breeze-leading-loose:  2;
+
+  /* Letter spacing */
+  --breeze-tracking-tighter: -0.02em;
+  --breeze-tracking-tight:   -0.01em;
+  --breeze-tracking-normal:   0em;
+  --breeze-tracking-wide:     0.02em;
+  --breeze-tracking-wider:    0.04em;
+  --breeze-tracking-widest:  0.08em;
+
+  /* ── Spacing (4px base grid) ── */
+  --breeze-space-0:    0;
+  --breeze-space-px:   0.0625rem;  /* 1px */
+  --breeze-space-0-5:  0.125rem;   /* 2px */
+  --breeze-space-1:    0.25rem;    /* 4px */
+  --breeze-space-1-5:  0.375rem;   /* 6px */
+  --breeze-space-2:    0.5rem;     /* 8px */
+  --breeze-space-2-5:  0.625rem;   /* 10px */
+  --breeze-space-3:    0.75rem;    /* 12px */
+  --breeze-space-3-5:  0.875rem;   /* 14px */
+  --breeze-space-4:    1rem;       /* 16px */
+  --breeze-space-5:    1.25rem;    /* 20px */
+  --breeze-space-6:    1.5rem;     /* 24px */
+  --breeze-space-7:    1.75rem;    /* 28px */
+  --breeze-space-8:    2rem;       /* 32px */
+  --breeze-space-9:    2.25rem;    /* 36px */
+  --breeze-space-10:   2.5rem;     /* 40px */
+  --breeze-space-12:   3rem;       /* 48px */
+  --breeze-space-14:   3.5rem;     /* 56px */
+  --breeze-space-16:   4rem;       /* 64px */
+  --breeze-space-20:   5rem;       /* 80px */
+  --breeze-space-24:   6rem;       /* 96px */
+  --breeze-space-32:   8rem;       /* 128px */
+
+  /* ── Border Radius (更圆润) ── */
+  --breeze-radius-none:  0;
+  --breeze-radius-sm:    6px;      /* 小圆角 */
+  --breeze-radius-md:    12px;     /* 默认圆角 */
+  --breeze-radius-lg:    18px;     /* 卡片圆角 */
+  --breeze-radius-xl:    24px;     /* 大卡片 */
+  --breeze-radius-2xl:   32px;     /* 超大容器 */
+  --breeze-radius-full:  9999px;  /* 药丸/圆形 */
+
+  /* ── Transitions ── */
+  --breeze-duration-instant:  0ms;
+  --breeze-duration-fast:     100ms;
+  --breeze-duration-normal:   180ms;
+  --breeze-duration-slow:     280ms;
+  --breeze-duration-slower:   400ms;
+  --breeze-duration-slowest:  600ms;
+
+  --breeze-ease-default:   cubic-bezier(0.4, 0, 0.2, 1);
+  --breeze-ease-in:        cubic-bezier(0.4, 0, 1, 1);
+  --breeze-ease-out:       cubic-bezier(0, 0, 0.2, 1);
+  --breeze-ease-in-out:    cubic-bezier(0.4, 0, 0.2, 1);
+  --breeze-ease-spring:    cubic-bezier(0.34, 1.3, 0.64, 1);
+  --breeze-ease-smooth:    cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  /* ── Z-Index Scale ── */
+  --breeze-z-base:      0;
+  --breeze-z-raised:   10;
+  --breeze-z-dropdown: 100;
+  --breeze-z-sticky:   200;
+  --breeze-z-fixed:    300;
+  --breeze-z-modal:    400;
+  --breeze-z-toast:    500;
+  --breeze-z-tooltip:  600;
+
+  /* ── Component Sizes ── */
+  --breeze-height-xs:    26px;
+  --breeze-height-sm:    34px;
+  --breeze-height-md:    42px;
+  --breeze-height-lg:    50px;
+  --breeze-height-xl:    58px;
+  --breeze-height-2xl:   66px;
+
+  --breeze-width-sm:     80px;
+  --breeze-width-md:    120px;
+  --breeze-width-lg:    200px;
+  --breeze-width-xl:    280px;
+  --breeze-width-full:  100%;
+}
+
+/* ============================================================
+   2. DARK THEME OVERRIDES (breeze-dark)
+   ============================================================ */
+[data-theme="breeze-dark"] {
+  --breeze-bg-primary:    #0F1B2D;
+  --breeze-bg-secondary:  #162236;
+  --breeze-bg-elevated:  #1D2E44;
+  --breeze-bg-overlay:   #253650;
+  --breeze-bg-input:     #162236;
+  --breeze-bg-hover:     #1D2E44;
+  --breeze-bg-active:    #253650;
+  --breeze-bg-subtle:    #0F1B2D;
+
+  --breeze-text-primary:   #E8F4FC;
+  --breeze-text-secondary: #8FAFC8;
+  --breeze-text-tertiary: #5A7A9A;
+  --breeze-text-muted:    #4A6A8A;
+
+  --breeze-border:       rgba(74,159,255,0.2);
+  --breeze-border-hover: rgba(74,159,255,0.5);
+  --breeze-border-focus: #4A9FFF;
+
+  --breeze-shadow-xs:     0 1px 2px rgba(0,0,0,0.3);
+  --breeze-shadow-sm:     0 2px 6px rgba(0,0,0,0.35);
+  --breeze-shadow-md:     0 4px 16px rgba(0,0,0,0.4);
+  --breeze-shadow-lg:     0 8px 28px rgba(0,0,0,0.45);
+  --breeze-shadow-xl:     0 16px 48px rgba(0,0,0,0.5);
+}
+
+/* ============================================================
+   3. AMBER WARM OVERRIDES (breeze-warm)
+   ============================================================ */
+[data-theme="breeze-warm"] {
+  --breeze-accent-primary:   #FF9F43;
+  --breeze-accent-secondary: #FFD93D;
+  --breeze-accent-warm:     #FF6B6B;
+  --breeze-glow-primary:     0 4px 16px rgba(255,159,67,0.3);
+  --breeze-glow-secondary:   0 4px 16px rgba(255,217,61,0.25);
+}
+
+/* ============================================================
+   4. VIOLET DREAM OVERRIDES (breeze-dream)
+   ============================================================ */
+[data-theme="breeze-dream"] {
+  --breeze-accent-primary:   #8B5CF6;
+  --breeze-accent-secondary: #EC4899;
+  --breeze-accent-tertiary:  #06B6D4;
+  --breeze-glow-primary:     0 4px 16px rgba(139,92,246,0.3);
+  --breeze-glow-secondary:   0 4px 16px rgba(236,72,153,0.25);
+}
+
+/* ============================================================
+   5. REDUCED MOTION
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --breeze-duration-fast:     0ms;
+    --breeze-duration-normal:   0ms;
+    --breeze-duration-slow:     0ms;
+    --breeze-duration-slower:   0ms;
+    --breeze-duration-slowest:  0ms;
+  }
+}

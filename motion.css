@@ -1,0 +1,480 @@
+/* ============================================================
+   BreezeUI Motion System — 动效规范 v1.0.0
+   Date: 2026-04-20 | Output: Hermes01
+   Design: 轻盈柔和、自然流畅
+   ============================================================ */
+
+/* ============================================================
+   1. PAGE ENTER / EXIT ANIMATIONS
+   ============================================================ */
+
+/* Fade in */
+@keyframes breeze-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.bz-animate-fade-in {
+  animation: breeze-fade-in var(--breeze-duration-slower) var(--breeze-ease-out);
+}
+
+/* Fade + slide up */
+@keyframes breeze-fade-slide-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.bz-animate-slide-up {
+  animation: breeze-fade-slide-up var(--breeze-duration-slower) var(--breeze-ease-out);
+}
+
+/* Fade + slide down */
+@keyframes breeze-fade-slide-down {
+  from { opacity: 0; transform: translateY(-16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.bz-animate-slide-down {
+  animation: breeze-fade-slide-down var(--breeze-duration-slower) var(--breeze-ease-out);
+}
+
+/* Scale in */
+@keyframes breeze-scale-in {
+  from { opacity: 0; transform: scale(0.94); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.bz-animate-scale-in {
+  animation: breeze-scale-in var(--breeze-duration-slower) var(--breeze-ease-spring);
+}
+
+/* Slide in from left */
+@keyframes breeze-slide-in-left {
+  from { opacity: 0; transform: translateX(-24px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+.bz-animate-slide-left {
+  animation: breeze-slide-in-left var(--breeze-duration-slower) var(--breeze-ease-out);
+}
+
+/* Slide in from right */
+@keyframes breeze-slide-in-right {
+  from { opacity: 0; transform: translateX(24px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+.bz-animate-slide-right {
+  animation: breeze-slide-in-right var(--breeze-duration-slower) var(--breeze-ease-out);
+}
+
+/* Bounce in */
+@keyframes breeze-bounce-in {
+  0%   { opacity: 0; transform: scale(0.9); }
+  60%  { opacity: 1; transform: scale(1.03); }
+  80%  { transform: scale(0.98); }
+  100% { transform: scale(1); }
+}
+.bz-animate-bounce-in {
+  animation: breeze-bounce-in var(--breeze-duration-slower) var(--breeze-ease-spring);
+}
+
+/* Page enter — staggered children */
+.bz-stagger > * {
+  opacity: 0;
+  animation: breeze-fade-slide-up var(--breeze-duration-slower) var(--breeze-ease-out) forwards;
+}
+.bz-stagger > *:nth-child(1)  { animation-delay: 0ms; }
+.bz-stagger > *:nth-child(2)  { animation-delay: 60ms; }
+.bz-stagger > *:nth-child(3)  { animation-delay: 120ms; }
+.bz-stagger > *:nth-child(4)  { animation-delay: 180ms; }
+.bz-stagger > *:nth-child(5)  { animation-delay: 240ms; }
+.bz-stagger > *:nth-child(6)  { animation-delay: 300ms; }
+.bz-stagger > *:nth-child(7)  { animation-delay: 360ms; }
+.bz-stagger > *:nth-child(8)  { animation-delay: 420ms; }
+.bz-stagger > *:nth-child(9)  { animation-delay: 480ms; }
+.bz-stagger > *:nth-child(10) { animation-delay: 540ms; }
+
+/* ============================================================
+   2. MICRO INTERACTIONS — BUTTON
+   ============================================================ */
+
+.bz-interactive {
+  transition: all var(--breeze-duration-normal) var(--breeze-ease-smooth);
+  cursor: pointer;
+}
+.bz-interactive:hover {
+  transition-duration: var(--breeze-duration-fast);
+}
+
+/* Button press */
+.bz-btn-press:active {
+  transform: scale(0.98);
+  transition-duration: var(--breeze-duration-instant) !important;
+}
+
+/* Button hover lift */
+.bz-btn-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--breeze-shadow-lg), var(--breeze-glow-primary);
+}
+.bz-btn-lift:active {
+  transform: translateY(0);
+}
+
+/* Button hover brighten */
+.bz-btn-brighten:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+/* ============================================================
+   3. MICRO INTERACTIONS — CARD
+   ============================================================ */
+
+.bz-card-hover {
+  transition: transform var(--breeze-duration-slow) var(--breeze-ease-smooth),
+              box-shadow var(--breeze-duration-slow) var(--breeze-ease-smooth),
+              border-color var(--breeze-duration-slow) var(--breeze-ease-smooth);
+  cursor: pointer;
+}
+.bz-card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--breeze-shadow-xl), 0 0 48px rgba(74,159,255,0.08);
+  border-color: rgba(74,159,255,0.3);
+}
+
+/* Soft glow on hover */
+.bz-card-glow:hover {
+  box-shadow: var(--breeze-shadow-xl), var(--breeze-glow-primary);
+}
+
+/* Subtle border brighten */
+.bz-card-border:hover {
+  border-color: rgba(74,159,255,0.4);
+}
+
+/* ============================================================
+   4. MICRO INTERACTIONS — INPUT
+   ============================================================ */
+
+.bz-input-animated {
+  transition: border-color var(--breeze-duration-normal) var(--breeze-ease-smooth),
+              box-shadow   var(--breeze-duration-normal) var(--breeze-ease-smooth),
+              background   var(--breeze-duration-normal) var(--breeze-ease-smooth);
+}
+.bz-input-animated:focus {
+  border-color: var(--breeze-border-focus);
+  box-shadow: 0 0 0 4px rgba(74,159,255,0.12);
+}
+
+/* ============================================================
+   5. SKELETON LOADING
+   ============================================================ */
+
+.bz-skeleton-wave {
+  position: relative;
+  overflow: hidden;
+  background: var(--breeze-border);
+  border-radius: var(--breeze-radius-sm);
+}
+.bz-skeleton-wave::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255,255,255,0.5) 40%,
+    rgba(255,255,255,0.8) 50%,
+    rgba(255,255,255,0.5) 60%,
+    transparent 100%
+  );
+  animation: skeleton-wave 1.8s ease-in-out infinite;
+  background-size: 200% 100%;
+}
+@keyframes skeleton-wave {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Skeleton pulse (alternate) */
+.bz-skeleton-pulse {
+  animation: skeleton-pulse 2.2s ease-in-out infinite;
+}
+@keyframes skeleton-pulse {
+  0%, 100% { opacity: 0.5; }
+  50%       { opacity: 1; }
+}
+
+/* ============================================================
+   6. PROGRESS BAR ANIMATIONS
+   ============================================================ */
+
+/* Shimmer sweep on progress bar */
+.bz-progress-sweep .bz-progress__bar::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0;
+  width: 50px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  animation: progress-shimmer 1.8s ease-in-out infinite;
+}
+@keyframes progress-shimmer {
+  from { transform: translateX(-150%); }
+  to   { transform: translateX(400%); }
+}
+
+/* Determinate — smooth width transition */
+.bz-progress-determinate .bz-progress__bar {
+  transition: width var(--breeze-duration-slow) var(--breeze-ease-out);
+}
+
+/* Indeterminate */
+.bz-progress-indeterminate .bz-progress__bar {
+  width: 40% !important;
+  animation: progress-indeterminate 1.5s ease-in-out infinite;
+}
+@keyframes progress-indeterminate {
+  0%   { transform: translateX(-200%); }
+  100% { transform: translateX(400%); }
+}
+
+/* ============================================================
+   7. SPINNER VARIANTS
+   ============================================================ */
+
+/* Default spinner (in breeze-ui.css) */
+.bz-spinner--dashed {
+  border-style: dashed;
+  border-color: var(--breeze-border);
+  border-top-color: var(--breeze-accent-primary);
+}
+
+/* Dual-color spinner */
+.bz-spinner--dual {
+  border-top-color: var(--breeze-accent-primary);
+  border-right-color: var(--breeze-accent-secondary);
+}
+
+/* Glow spinner */
+.bz-spinner--glow {
+  box-shadow: var(--breeze-glow-primary);
+}
+
+/* ============================================================
+   8. PULSE / BEACON
+   ============================================================ */
+
+/* Pulse beacon */
+.bz-pulse {
+  position: relative;
+}
+.bz-pulse::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: inherit;
+  border: 2px solid var(--breeze-accent-primary);
+  animation: pulse-ring 2s ease-out infinite;
+}
+@keyframes pulse-ring {
+  0%   { opacity: 0.8; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1.5); }
+}
+
+/* Dot pulse */
+.bz-dot-pulse {
+  position: relative;
+}
+.bz-dot-pulse::after {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  transform: translate(-50%, -50%);
+  animation: dot-pulse 2s ease-in-out infinite;
+}
+@keyframes dot-pulse {
+  0%, 100% { opacity: 1; transform: translate(-50%,-50%) scale(1); }
+  50%       { opacity: 0.5; transform: translate(-50%,-50%) scale(0.6); }
+}
+
+/* Breathing pulse (softer) */
+.bz-breathe {
+  animation: breathe 3s ease-in-out infinite;
+}
+@keyframes breathe {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50%       { opacity: 1;   transform: scale(1.02); }
+}
+
+/* ============================================================
+   9. TOOLTIP / POPOVER ANIMATIONS
+   ============================================================ */
+
+.bz-popover-enter {
+  opacity: 0;
+  transform: scale(0.94) translateY(6px);
+  transition: all var(--breeze-duration-normal) var(--breeze-ease-spring);
+}
+.bz-popover-enter-active {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+.bz-popover-leave {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  transition: all var(--breeze-duration-fast) var(--breeze-ease-in);
+}
+.bz-popover-leave-to {
+  opacity: 0;
+  transform: scale(0.96) translateY(4px);
+}
+
+/* ============================================================
+   10. PAGE TRANSITIONS (Vue / React router support)
+   ============================================================ */
+
+.bz-page-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+.bz-page-enter-active {
+  transition: opacity var(--breeze-duration-slower) var(--breeze-ease-out),
+              transform var(--breeze-duration-slower) var(--breeze-ease-out);
+}
+.bz-page-leave-active {
+  transition: opacity var(--breeze-duration-normal) var(--breeze-ease-in);
+}
+.bz-page-leave-to {
+  opacity: 0;
+}
+
+/* ============================================================
+   11. DRAWER / SLIDE PANEL
+   ============================================================ */
+
+@keyframes breeze-drawer-in-right {
+  from { transform: translateX(100%); opacity: 0; }
+  to   { transform: translateX(0);   opacity: 1; }
+}
+.bz-drawer-right {
+  animation: breeze-drawer-in-right var(--breeze-duration-slow) var(--breeze-ease-smooth);
+}
+
+@keyframes breeze-drawer-in-left {
+  from { transform: translateX(-100%); opacity: 0; }
+  to   { transform: translateX(0);      opacity: 1; }
+}
+.bz-drawer-left {
+  animation: breeze-drawer-in-left var(--breeze-duration-slow) var(--breeze-ease-smooth);
+}
+
+/* Bottom drawer */
+@keyframes breeze-drawer-in-bottom {
+  from { transform: translateY(100%); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+.bz-drawer-bottom {
+  animation: breeze-drawer-in-bottom var(--breeze-duration-slow) var(--breeze-ease-smooth);
+}
+
+/* ============================================================
+   12. LIST STAGGER (for grids/lists)
+   ============================================================ */
+
+.bz-list-stagger {
+  animation: breeze-fade-slide-up var(--breeze-duration-slower) var(--breeze-ease-out) both;
+}
+.bz-list-stagger:nth-child(1)  { animation-delay: 0ms; }
+.bz-list-stagger:nth-child(2)  { animation-delay: 55ms; }
+.bz-list-stagger:nth-child(3)  { animation-delay: 110ms; }
+.bz-list-stagger:nth-child(4)  { animation-delay: 165ms; }
+.bz-list-stagger:nth-child(5)  { animation-delay: 220ms; }
+.bz-list-stagger:nth-child(6)  { animation-delay: 275ms; }
+.bz-list-stagger:nth-child(7)  { animation-delay: 330ms; }
+.bz-list-stagger:nth-child(8)  { animation-delay: 385ms; }
+.bz-list-stagger:nth-child(9)  { animation-delay: 440ms; }
+.bz-list-stagger:nth-child(10) { animation-delay: 495ms; }
+
+/* ============================================================
+   13. HOVER LIFT (generic)
+   ============================================================ */
+
+.bz-lift {
+  transition: transform var(--breeze-duration-normal) var(--breeze-ease-smooth),
+              box-shadow var(--breeze-duration-normal) var(--breeze-ease-smooth);
+}
+.bz-lift:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--breeze-shadow-lg);
+}
+.bz-lift:active {
+  transform: translateY(0);
+}
+
+/* ============================================================
+   14. RIPPLE EFFECT
+   ============================================================ */
+
+.bz-ripple {
+  position: relative;
+  overflow: hidden;
+}
+.bz-ripple::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(74,159,255,0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease, opacity 0.6s ease;
+  opacity: 0;
+}
+.bz-ripple:active::after {
+  width: 200px;
+  height: 200px;
+  opacity: 1;
+  transition: 0s;
+}
+
+/* ============================================================
+   15. FLOATING ELEMENT
+   ============================================================ */
+
+.bz-float {
+  animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+
+/* ============================================================
+   16. REDUCED MOTION OVERRIDE
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ============================================================
+   17. CSS EASING UTILITY CLASSES
+   ============================================================ */
+
+.bz-ease-default  { transition-timing-function: var(--breeze-ease-default); }
+.bz-ease-in       { transition-timing-function: var(--breeze-ease-in); }
+.bz-ease-out      { transition-timing-function: var(--breeze-ease-out); }
+.bz-ease-spring   { transition-timing-function: var(--breeze-ease-spring); }
+.bz-ease-smooth   { transition-timing-function: var(--breeze-ease-smooth); }
+
+.bz-duration-fast    { transition-duration: var(--breeze-duration-fast) !important; }
+.bz-duration-normal  { transition-duration: var(--breeze-duration-normal) !important; }
+.bz-duration-slow    { transition-duration: var(--breeze-duration-slow) !important; }
+.bz-duration-slower  { transition-duration: var(--breeze-duration-slower) !important; }

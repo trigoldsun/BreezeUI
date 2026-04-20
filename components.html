@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BreezeUI — 明亮清新风组件展示</title>
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="breeze-ui.css">
+  <link rel="stylesheet" href="motion.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--breeze-font-body);
+      background: var(--breeze-bg-primary);
+      color: var(--breeze-text-primary);
+      line-height: 1.6;
+    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 40px 24px; }
+    .header {
+      text-align: center;
+      padding: 60px 0;
+      border-bottom: 1px solid var(--breeze-border-subtle);
+      margin-bottom: 60px;
+    }
+    .header h1 {
+      font-family: var(--breeze-font-display);
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--breeze-text-primary);
+      margin-bottom: 16px;
+    }
+    .header p { color: var(--breeze-text-secondary); font-size: 1.125rem; }
+    .theme-switcher {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 24px;
+    }
+    .theme-btn {
+      padding: 8px 16px;
+      border: 1.5px solid var(--breeze-border);
+      border-radius: var(--breeze-radius-full);
+      background: var(--breeze-bg-elevated);
+      cursor: pointer;
+      font-size: 0.875rem;
+      transition: all 0.2s;
+    }
+    .theme-btn:hover { border-color: var(--breeze-border-hover); }
+    .theme-btn.active { border-color: var(--breeze-accent-primary); background: var(--breeze-pastel-blue); }
+    .section {
+      margin-bottom: 80px;
+    }
+    .section-title {
+      font-family: var(--breeze-font-display);
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin-bottom: 32px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid var(--breeze-border);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .demo-card {
+      background: var(--breeze-bg-elevated);
+      border: 1px solid var(--breeze-border);
+      border-radius: var(--breeze-radius-lg);
+      padding: 24px;
+    }
+    .demo-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--breeze-text-tertiary);
+      margin-bottom: 16px;
+    }
+    .demo-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .color-swatch {
+      width: 80px;
+      height: 80px;
+      border-radius: var(--breeze-radius-md);
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 8px;
+      font-size: 0.625rem;
+      font-weight: 600;
+      color: #fff;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    }
+    .color-row { display: flex; gap: 8px; flex-wrap: wrap; }
+    .badge-row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+    .input-demo { width: 100%; margin-bottom: 12px; }
+    .progress-demo { margin-bottom: 16px; }
+    .table-demo { width: 100%; }
+    .tabs-demo { margin-bottom: 24px; }
+    .spinner-row { display: flex; gap: 16px; align-items: center; }
+    .avatar-row { display: flex; gap: 12px; align-items: center; }
+    .skeleton-row { display: flex; gap: 16px; }
+    .alert-demo { margin-bottom: 16px; }
+    .divider-demo { margin: 24px 0; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <h1>BreezeUI</h1>
+      <p>明亮清新风设计系统 — 轻盈通透、温暖自然、清新明亮</p>
+      <div class="theme-switcher">
+        <button class="theme-btn active" onclick="setTheme('')">明亮</button>
+        <button class="theme-btn" onclick="setTheme('breeze-dark')">深邃</button>
+        <button class="theme-btn" onclick="setTheme('breeze-warm')">暖阳</button>
+        <button class="theme-btn" onclick="setTheme('breeze-dream')">梦幻</button>
+      </div>
+    </div>
+
+    <!-- Color System -->
+    <div class="section">
+      <h2 class="section-title">色彩系统</h2>
+      <div class="grid">
+        <div class="demo-card">
+          <div class="demo-label">主背景色</div>
+          <div class="color-row">
+            <div class="color-swatch" style="background:#F8FAFE;color:#1E3A5F;">Primary</div>
+            <div class="color-swatch" style="background:#EEF3FA;color:#1E3A5F;">Secondary</div>
+            <div class="color-swatch" style="background:#FFFFFF;color:#1E3A5F;">Elevated</div>
+          </div>
+        </div>
+        <div class="demo-card">
+          <div class="demo-label">强调色</div>
+          <div class="color-row">
+            <div class="color-swatch" style="background:#4A9FFF;">天蓝</div>
+            <div class="color-swatch" style="background:#36D399;">薄荷绿</div>
+            <div class="color-swatch" style="background:#FF9F43;">柔和橙</div>
+            <div class="color-swatch" style="background:#FF6B9D;">樱粉</div>
+          </div>
+        </div>
+        <div class="demo-card">
+          <div class="demo-label">功能色</div>
+          <div class="color-row">
+            <div class="color-swatch" style="background:#22C55E;">成功</div>
+            <div class="color-swatch" style="background:#F59E0B;">警告</div>
+            <div class="color-swatch" style="background:#EF4444;">危险</div>
+            <div class="color-swatch" style="background:#4A9FFF;">信息</div>
+          </div>
+        </div>
+        <div class="demo-card">
+          <div class="demo-label">Pastel 柔和色</div>
+          <div class="color-row">
+            <div class="color-swatch" style="background:#DBEAFE;color:#1E3A5F;">淡蓝</div>
+            <div class="color-swatch" style="background:#D1FAE5;color:#1E3A5F;">淡绿</div>
+            <div class="color-swatch" style="background:#FEF3C7;color:#1E3A5F;">淡橙</div>
+            <div class="color-swatch" style="background:#FCE7F3;color:#1E3A5F;">淡粉</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="section">
+      <h2 class="section-title">按钮 Button</h2>
+      <div class="grid">
+        <div class="demo-card">
+          <div class="demo-label">主要按钮</div>
+          <div class="demo-row">
+            <button class="bz-btn bz-btn--primary">主要</button>
+            <button class="bz-btn bz-btn--secondary">次要</button>
+            <button class="bz-btn bz-btn--outline">描边</button>
+            <button class="bz-btn bz-btn--ghost">幽灵</button>
+          </div>
+        </div>
+        <div class="demo-card">
+          <div class="demo-label">功能按钮</div>
+          <div class="demo-row">
+            <button class="bz-btn bz-btn--danger">危险</button>
+            <button class="bz-btn bz-btn--warm">暖橙</button>
+            <button class="bz-btn bz-btn--soft">柔和</button>
+          </div>
+        </div>
+        <div class="demo-card">
+          <div class="demo-label">尺寸</div>
+          <div class="demo-row">
+            <button class="bz-btn bz-btn--primary bz-btn--xs">超小</button>
+            <button class="bz-btn bz-btn--primary bz-btn--sm">小</button>
+            <button class="bz-btn bz-btn--primary">默认</button>
+            <button class="bz-btn bz-btn--primary bz-btn--lg">大</button>
+            <button class="bz-btn bz-btn--primary bz-btn--xl">特大</button>
+          </div>
+        </div>
+        <div class="demo-card">
+          <div class="demo-label">状态</div>
+          <div class="demo-row">
+            <button class="bz-btn bz-btn--primary" disabled>禁用</button>
+            <button class="bz-btn bz-btn--primary bz-btn--loading">加载中</button>
+            <button class="bz-btn bz-btn--primary bz-btn--pill">药丸</button>
+            <button class="bz-btn bz-btn--icon bz-btn--primary">☰</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Inputs -->
+    <div class="section">
+      <h2 class="section-title">输入框 Input</h2>
+      <div class="grid">
+        <div class="demo-card">
+          <div class="demo-label">基础输入</div>
+          <div class="input-demo">
+            <input type="text" class="bz-input" placeholder="请输入内容...">
+          </div>
+          <div class="input-demo">
+            <input type="text" class="bz-input bz-input--error" value="错误输入" placeholder="错误状态">
+          </div>
+          <div class="input-demo">
+            <input type="text" class="bz-input" placeholder="禁用状态" disabled>
+          </div>
+        </div>
+        <div class="demo-card">
+          <div class="demo-label">带标签</div>
+          <div class="input-demo">
+            <div class="bz-input-wrapper">
+              <label class="bz-label">用户名</label>
+              <input type="text" class="bz-input" placeholder="请输入用户名">
+            </div>
+          </div>
+          <div class="input-demo">
+            <div class="bz-input-wrapper">
+              <label class="bz-label">邮箱</label>
+              <input type="text" class="bz-input bz-input--error" value="invalid-email">
+              <span class="bz-error-msg">请输入有效的邮箱地址</span>
+            </div>
+          </div>
+        </div>
+        <div class="demo-card">
+          <div class="demo-label">尺寸</div>
+          <div class="input-demo">
+            <input type="text" class="bz-input bz-input--sm" placeholder="小尺寸">
+          </div>
+          <div class="input-demo">
+            <input type="text" class="bz-input" placeholder="默认尺寸">
+          </div>
+          <div class="input-demo">
+            <input type="text" class="bz-input bz-input--lg" placeholder="大尺寸">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Checkbox / Radio / Switch -->
+    <div class="section">
+      <h2 class="section-title">选择控件</h2>
+      <div class="grid">
+        <div class="demo-card">
+          <div class="demo-label">Checkbox</div>
+          <div class="demo-row" style="flex-direction:column;gap:12px;align-items:flex-start;">
+            <label class="bz-check">
+              <input type="checkbox" checked>
+              <span class="bz-check__box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+              <span class="bz-check__text">选中状态</span>
+            </label>
+            <label class="bz-check">
+              <input type="checkbox">
+              <span class="bz-check__box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+              <span class="bz-check__text">未选中</span>
+            </label>
+            <label class="bz-check">
+              <input type="checkbox" disabled>
+              <span class="bz-check__box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+              <span class="bz-check__text">禁用</span>
+            </label>
+          </div>
+        </div>
+        <div class="demo-card">
+          <div class="demo-label">Radio</div>
+          <div class="demo-row" style="flex-direction:column;gap:12px;align-items:flex-start;">
+            <label class="bz-check bz-check--radio">
+              <input type="radio" name="demo-radio" checked>
+              <span class="bz-check__box"></span>
+              <span class="bz-check__text">选项 A</span>
+            </label>
+            <label class="bz-check bz-check--radio">
+              <input type="radio" name="demo-radio">
+              <span class="bz-check__box"></span>
+              <span class="bz-check__text">选项 B</span>
+            </label>
+            <label class="bz-check bz-check--radio">
+              <input type="radio" name="demo-radio" disabled>
+              <span class="bz-check__box"></span>
+              <span class="bz-check__text">禁用</span>
+            </label>
+          </div>
+        </div>
+        <div class="demo-card">
+          <div class="demo-label">Switch</div>
+          <div class="demo-row" style="flex-direction:column;gap:12px;align-items:flex-start;">
+            <label class="bz-switch">
+              <input type="checkbox" checked>
+              <span class="bz-switch__track"><span class="bz-switch__thumb"></span></span>
+              <span class="bz-check__text">开启状态</span>
+            </label>
+            <label class="bz-switch">
+              <input type="checkbox">
+              <span class="bz-switch__track"><span class="bz-switch__thumb"></span></span>
+              <span class="bz-check__text">关闭状态</span>
+            </label>
+            <label class="bz-switch">
+              <input type="checkbox" disabled>
+              <span class="bz-switch__track"><span class="bz-switch__thumb"></span></span>
+              <span class="bz-check__text">禁用</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Badges -->
+    <div class="section">
+      <h2 class="section-title">徽章 Badge</h2>
+      <div class="grid">
+        <div class="demo-card">
+          <div class="demo-label">变体</div>
+          <div class="badge-row">
+            <span class="bz-badge">默认</span>
+            <span class="bz-badge bz-badge--primary">主要</span>
+            <span class="bz-badge bz-badge--success">成功</span>
+            <span class="bz-badge bz-badge--warning">警告</span>
+            <span class="bz-badge bz-badge--danger">危险</span>
+            <span class="bz-badge bz-badge--gold">金色</span>
+          </div>
+        </div>
+        <div class="demo-card">
+          <div class="demo-label">带圆点</div>
+          <div class="badge-row">
+            <span class="bz-badge bz-badge--primary bz-badge--dot">在线</span>
+            <span class="bz-badge bz-badge--success bz-badge--dot">新</span>
+            <span class="bz-badge bz-badge--warning bz-badge--dot">处理中</span>
+          </div>
+        </div>
+        <div class="demo-card">
+          <div class="demo-label">药丸形</div>
+          <div class="badge-row">
+            <span class="bz-badge bz-badge--soft bz-badge--pill">柔和药丸</span>
+            <span class="bz-badge bz-badge--primary bz-badge--pill">主要药丸</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Progress -->
+    <div class="section">
+      <h2 class="section-title">进度条 Progress</h2>
+      <div class="grid">
+        <div class="demo-card">
+          <div class="demo-label">尺寸</div>
+          <div class="progress-demo"><div class="bz-progress bz-progress--sm"><div class="bz-progress__bar" style="width:30%"></div></div></div>
+          <div class="progress-demo"><div class="bz-progress bz-progress--md"><div class="bz-progress__bar" style="width:50%"></div></div></div>
+          <div class="progress-demo"><div class="bz-progress bz-progress--lg"><div class="bz-progress__bar" style="width:70%"></div></div></div>
+        </div>
+        <div class="demo-card">
+          <div class="demo-label">颜色</div>
+          <div class="progress-demo"><div class="bz-progress"><div class="bz-progress__bar" style="width:60%"></div></div></div>
+          <div class="progress-demo"><div class="bz-progress bz-progress--success"><div class="bz-progress__bar" style="width:75%"></div></div></div>
+          <div class="progress-demo"><div class="bz-progress bz-progress--warning"><div class="bz-progress__bar" style="width:45%"></div></div></div>
+          <div class="progress-demo"><div class="bz-progress bz-progress--danger"><div class="bz-progress__bar" style="width:25%"></div></div></div>
+        </div>
+        <div class="demo-card">
+          <div class="demo-label">不确定进度</div>
+          <div class="progress-demo"><div class="bz-progress bz-progress--indeterminate"><div class="bz-progress__bar"></div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Spinners -->
+    <div class="section">
+      <h2 class="section-title">加载动画 Spinner</h2>
+      <div class="grid">
+        <div class="demo-card">
+          <div class="demo-label">尺寸</div>
+          <div class="spinner-row">
+            <div class="bz-spinner bz-spinner--sm"></div>
+            <div class="bz-spinner bz-spinner--md"></div>
+            <div class="bz-spinner bz-spinner--lg"></div>
+            <div class="bz-spinner bz-spinner--xl"></div>
+          </div>
+        </div>
+        <div class="demo-card">
+          <div class="demo-label">变体</div>
+          <div class="spinner-row">
+            <div class="bz-spinner bz-spinner--dual"></div>
+            <div class="bz-spinner bz-spinner--glow"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Avatar -->
+    <div class="section">
+      <h2 class="section-title">头像 Avatar</h2>
+      <div class="demo-card">
+        <div class="demo-label">尺寸</div>
+        <div class="avatar-row">
+          <div class="bz-avatar bz-avatar--xs" style="background:var(--breeze-pastel-blue);color:var(--breeze-accent-primary);">小</div>
+          <div class="bz-avatar bz-avatar--sm" style="background:var(--breeze-pastel-green);color:var(--breeze-accent-secondary);">李</div>
+          <div class="bz-avatar bz-avatar--md" style="background:var(--breeze-pastel-orange);color:var(--breeze-accent-tertiary);">王</div>
+          <div class="bz-avatar bz-avatar--lg" style="background:var(--breeze-pastel-pink);color:var(--breeze-accent-warm);">张</div>
+          <div class="bz-avatar bz-avatar--xl" style="background:var(--breeze-pastel-blue);color:var(--breeze-accent-primary);">陈</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Skeleton -->
+    <div class="section">
+      <h2 class="section-title">骨架屏 Skeleton</h2>
+      <div class="demo-card">
+        <div class="demo-label">Wave 动画</div>
+        <div class="skeleton-row" style="margin-bottom:16px;">
+          <div class="bz-skeleton" style="width:48px;height:48px;border-radius:var(--breeze-radius-full);"></div>
+          <div style="flex:1;">
+            <div class="bz-skeleton" style="width:40%;height:14px;margin-bottom:8px;"></div>
+            <div class="bz-skeleton" style="width:70%;height:12px;"></div>
+          </div>
+        </div>
+        <div class="demo-row">
+          <div class="bz-skeleton" style="width:100px;height:80px;"></div>
+          <div class="bz-skeleton" style="width:100px;height:80px;"></div>
+          <div class="bz-skeleton" style="width:100px;height:80px;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Alert -->
+    <div class="section">
+      <h2 class="section-title">提示框 Alert</h2>
+      <div class="grid">
+        <div class="demo-card">
+          <div class="alert-demo bz-alert bz-alert--info">
+            <span class="bz-alert__icon">ℹ️</span>
+            <div class="bz-alert__content">
+              <div class="bz-alert__title">信息提示</div>
+              <div class="bz-alert__msg">这是一条普通的信息提示内容</div>
+            </div>
+          </div>
+          <div class="alert-demo bz-alert bz-alert--success">
+            <span class="bz-alert__icon">✅</span>
+            <div class="bz-alert__content">
+              <div class="bz-alert__title">操作成功</div>
+              <div class="bz-alert__msg">您的更改已成功保存</div>
+            </div>
+          </div>
+        </div>
+        <div class="demo-card">
+          <div class="alert-demo bz-alert bz-alert--warning">
+            <span class="bz-alert__icon">⚠️</span>
+            <div class="bz-alert__content">
+              <div class="bz-alert__title">警告提示</div>
+              <div class="bz-alert__msg">请注意账户安全</div>
+            </div>
+          </div>
+          <div class="alert-demo bz-alert bz-alert--danger">
+            <span class="bz-alert__icon">❌</span>
+            <div class="bz-alert__content">
+              <div class="bz-alert__title">错误提示</div>
+              <div class="bz-alert__msg">操作失败，请重试</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="section">
+      <h2 class="section-title">标签页 Tabs</h2>
+      <div class="grid">
+        <div class="demo-card">
+          <div class="demo-label">下划线样式</div>
+          <div class="tabs-demo">
+            <div class="bz-tabs">
+              <div class="bz-tab bz-tab--active">标签一</div>
+              <div class="bz-tab">标签二</div>
+              <div class="bz-tab">标签三</div>
+            </div>
+          </div>
+        </div>
+        <div class="demo-card">
+          <div class="demo-label">胶囊样式</div>
+          <div class="tabs-demo">
+            <div class="bz-tabs bz-tabs--pill">
+              <div class="bz-tab bz-tab--active">活跃</div>
+              <div class="bz-tab">选项</div>
+              <div class="bz-tab">设置</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card -->
+    <div class="section">
+      <h2 class="section-title">卡片 Card</h2>
+      <div class="grid">
+        <div class="bz-card">
+          <div class="bz-card__header">
+            <span class="bz-card__title">默认卡片</span>
+            <span class="bz-badge bz-badge--primary">新</span>
+          </div>
+          <p style="color:var(--breeze-text-secondary);font-size:0.875rem;line-height:1.6;">
+            这是一段卡片内容，展示了默认卡片的样式效果。鼠标悬浮时会看到悬浮动效。
+          </p>
+          <div class="bz-card__footer" style="display:flex;justify-content:flex-end;gap:8px;margin-top:16px;padding-top:16px;border-top:1px solid var(--breeze-border-subtle);">
+            <button class="bz-btn bz-btn--ghost bz-btn--sm">取消</button>
+            <button class="bz-btn bz-btn--primary bz-btn--sm">确定</button>
+          </div>
+        </div>
+        <div class="bz-card bz-card--flat">
+          <div class="bz-card__header">
+            <span class="bz-card__title">扁平卡片</span>
+          </div>
+          <p style="color:var(--breeze-text-secondary);font-size:0.875rem;line-height:1.6;">
+            扁平卡片没有悬浮阴影效果，适合在列表中使用。
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Table -->
+    <div class="section">
+      <h2 class="section-title">表格 Table</h2>
+      <div class="demo-card">
+        <div class="demo-label">带边框表格</div>
+        <table class="bz-table">
+          <thead>
+            <tr>
+              <th>姓名</th>
+              <th>邮箱</th>
+              <th>角色</th>
+              <th>状态</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>张小明</td>
+              <td>zhang@example.com</td>
+              <td>管理员</td>
+              <td><span class="bz-badge bz-badge--success">在线</span></td>
+            </tr>
+            <tr>
+              <td>李华</td>
+              <td>li@example.com</td>
+              <td>编辑</td>
+              <td><span class="bz-badge bz-badge--warning">离线</span></td>
+            </tr>
+            <tr>
+              <td>王芳</td>
+              <td>wang@example.com</td>
+              <td>访客</td>
+              <td><span class="bz-badge">禁用</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Tooltip -->
+    <div class="section">
+      <h2 class="section-title">工具提示 Tooltip</h2>
+      <div class="demo-card">
+        <div class="demo-label">悬浮显示</div>
+        <div class="demo-row">
+          <div class="bz-tooltip">
+            <button class="bz-btn bz-btn--primary">悬停显示</button>
+            <span class="bz-tooltip__content">这是一条工具提示</span>
+          </div>
+          <div class="bz-tooltip">
+            <button class="bz-btn bz-btn--secondary">右侧提示</button>
+            <span class="bz-tooltip__content bz-tooltip--right">显示在右边</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Animations -->
+    <div class="section">
+      <h2 class="section-title">动效展示</h2>
+      <div class="grid">
+        <div class="demo-card">
+          <div class="demo-label">入场动画</div>
+          <div class="demo-row">
+            <button class="bz-btn bz-btn--primary bz-btn-lift">悬浮上浮</button>
+            <button class="bz-btn bz-btn--secondary bz-btn-brighten">悬浮增亮</button>
+          </div>
+        </div>
+        <div class="demo-card">
+          <div class="demo-label">特殊效果</div>
+          <div class="demo-row">
+            <div class="bz-pulse" style="width:40px;height:40px;background:var(--breeze-accent-primary);border-radius:var(--breeze-radius-full);display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px;">💫</div>
+            <div class="bz-breathe" style="width:40px;height:40px;background:var(--breeze-accent-secondary);border-radius:var(--breeze-radius-full);display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px;">🌊</div>
+            <div class="bz-float" style="width:40px;height:40px;background:var(--breeze-accent-warm);border-radius:var(--breeze-radius-full);display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px;">✨</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="section">
+      <h2 class="section-title">分隔线 Divider</h2>
+      <div class="demo-card">
+        <div style="color:var(--breeze-text-secondary);">上面内容</div>
+        <div class="bz-divider"></div>
+        <div style="color:var(--breeze-text-secondary);">下面内容</div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function setTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      document.querySelectorAll('.theme-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>

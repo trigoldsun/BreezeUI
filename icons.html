@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BreezeUI Icons</title>
+  <link rel="stylesheet" href="tokens.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--breeze-font-body);
+      background: var(--breeze-bg-primary);
+      color: var(--breeze-text-primary);
+      padding: 40px;
+    }
+    h1 { font-family: var(--breeze-font-display); margin-bottom: 8px; }
+    .subtitle { color: var(--breeze-text-secondary); margin-bottom: 40px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 12px;
+    }
+    .icon-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      padding: 16px 8px;
+      background: var(--breeze-bg-elevated);
+      border: 1px solid var(--breeze-border);
+      border-radius: var(--breeze-radius-md);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .icon-card:hover {
+      border-color: var(--breeze-border-hover);
+      background: var(--breeze-bg-hover);
+      transform: translateY(-2px);
+    }
+    .icon-card svg {
+      width: 24px;
+      height: 24px;
+      color: var(--breeze-text-primary);
+    }
+    .icon-name {
+      font-size: 10px;
+      color: var(--breeze-text-tertiary);
+      text-align: center;
+      word-break: break-all;
+    }
+    .section { margin-bottom: 48px; }
+    .section-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--breeze-text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--breeze-border-subtle);
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      background: var(--breeze-pastel-blue);
+      color: var(--breeze-accent-primary);
+      border-radius: var(--breeze-radius-full);
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+  </style>
+</head>
+<body>
+  <h1>BreezeUI Icons</h1>
+  <p class="subtitle">120+ 统一线性图标 · 24x24 · 2px 描边</p>
+  <span class="badge">BreezeUI v1.0.0</span>
+
+  <div class="section">
+    <div class="section-title">基础操作</div>
+    <div class="grid">
+
+    <div class="section">
+    <div class="section-title">基础操作</div>
+    <div class="grid">
+      <div class="icon-card" title="home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#home"/></svg>
+        <span class="icon-name">home</span>
+      </div>
+      <div class="icon-card" title="search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#search"/></svg>
+        <span class="icon-name">search</span>
+      </div>
+      <div class="icon-card" title="user">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#user"/></svg>
+        <span class="icon-name">user</span>
+      </div>
+      <div class="icon-card" title="users">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#users"/></svg>
+        <span class="icon-name">users</span>
+      </div>
+      <div class="icon-card" title="settings">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#settings"/></svg>
+        <span class="icon-name">settings</span>
+      </div>
+      <div class="icon-card" title="bell">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#bell"/></svg>
+        <span class="icon-name">bell</span>
+      </div>
+      <div class="icon-card" title="menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#menu"/></svg>
+        <span class="icon-name">menu</span>
+      </div>
+      <div class="icon-card" title="close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#close"/></svg>
+        <span class="icon-name">close</span>
+      </div>
+      <div class="icon-card" title="check">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#check"/></svg>
+        <span class="icon-name">check</span>
+      </div>
+      <div class="icon-card" title="chevron-down">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#chevron-down"/></svg>
+        <span class="icon-name">chevron-down</span>
+      </div>
+      <div class="icon-card" title="chevron-up">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#chevron-up"/></svg>
+        <span class="icon-name">chevron-up</span>
+      </div>
+      <div class="icon-card" title="chevron-right">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#chevron-right"/></svg>
+        <span class="icon-name">chevron-right</span>
+      </div>
+      <div class="icon-card" title="chevron-left">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#chevron-left"/></svg>
+        <span class="icon-name">chevron-left</span>
+      </div>
+      <div class="icon-card" title="plus">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#plus"/></svg>
+        <span class="icon-name">plus</span>
+      </div>
+      <div class="icon-card" title="minus">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#minus"/></svg>
+        <span class="icon-name">minus</span>
+      </div>
+      <div class="icon-card" title="refresh">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#refresh"/></svg>
+        <span class="icon-name">refresh</span>
+      </div>
+      <div class="icon-card" title="download">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#download"/></svg>
+        <span class="icon-name">download</span>
+      </div>
+      <div class="icon-card" title="upload">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#upload"/></svg>
+        <span class="icon-name">upload</span>
+      </div>
+      <div class="icon-card" title="eye">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#eye"/></svg>
+        <span class="icon-name">eye</span>
+      </div>
+      <div class="icon-card" title="eye-off">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#eye-off"/></svg>
+        <span class="icon-name">eye-off</span>
+      </div>
+      <div class="icon-card" title="lock">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#lock"/></svg>
+        <span class="icon-name">lock</span>
+      </div>
+      <div class="icon-card" title="unlock">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#unlock"/></svg>
+        <span class="icon-name">unlock</span>
+      </div>
+      <div class="icon-card" title="copy">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#copy"/></svg>
+        <span class="icon-name">copy</span>
+      </div>
+      <div class="icon-card" title="trash">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#trash"/></svg>
+        <span class="icon-name">trash</span>
+      </div>
+      <div class="icon-card" title="edit">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#edit"/></svg>
+        <span class="icon-name">edit</span>
+      </div>
+      <div class="icon-card" title="info">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#info"/></svg>
+        <span class="icon-name">info</span>
+      </div>
+      <div class="icon-card" title="help-circle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#help-circle"/></svg>
+        <span class="icon-name">help-circle</span>
+      </div>
+      <div class="icon-card" title="alert-circle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#alert-circle"/></svg>
+        <span class="icon-name">alert-circle</span>
+      </div>
+      <div class="icon-card" title="alert-triangle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#alert-triangle"/></svg>
+        <span class="icon-name">alert-triangle</span>
+      </div>
+      <div class="icon-card" title="check-circle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#check-circle"/></svg>
+        <span class="icon-name">check-circle</span>
+      </div>
+      <div class="icon-card" title="x-circle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#x-circle"/></svg>
+        <span class="icon-name">x-circle</span>
+      </div>
+    </div>
+  </div>
+
+    <div class="section">
+    <div class="section-title">设备/系统</div>
+    <div class="grid">
+      <div class="icon-card" title="monitor">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#monitor"/></svg>
+        <span class="icon-name">monitor</span>
+      </div>
+      <div class="icon-card" title="smartphone">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#smartphone"/></svg>
+        <span class="icon-name">smartphone</span>
+      </div>
+      <div class="icon-card" title="tablet">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#tablet"/></svg>
+        <span class="icon-name">tablet</span>
+      </div>
+      <div class="icon-card" title="cpu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#cpu"/></svg>
+        <span class="icon-name">cpu</span>
+      </div>
+      <div class="icon-card" title="wifi">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#wifi"/></svg>
+        <span class="icon-name">wifi</span>
+      </div>
+      <div class="icon-card" title="bluetooth">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#bluetooth"/></svg>
+        <span class="icon-name">bluetooth</span>
+      </div>
+      <div class="icon-card" title="battery">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#battery"/></svg>
+        <span class="icon-name">battery</span>
+      </div>
+      <div class="icon-card" title="camera">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#camera"/></svg>
+        <span class="icon-name">camera</span>
+      </div>
+      <div class="icon-card" title="mic">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#mic"/></svg>
+        <span class="icon-name">mic</span>
+      </div>
+      <div class="icon-card" title="speaker">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#speaker"/></svg>
+        <span class="icon-name">speaker</span>
+      </div>
+      <div class="icon-card" title="server">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#server"/></svg>
+        <span class="icon-name">server</span>
+      </div>
+      <div class="icon-card" title="hard-drive">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#hard-drive"/></svg>
+        <span class="icon-name">hard-drive</span>
+      </div>
+      <div class="icon-card" title="database">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#database"/></svg>
+        <span class="icon-name">database</span>
+      </div>
+      <div class="icon-card" title="cloud">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#cloud"/></svg>
+        <span class="icon-name">cloud</span>
+      </div>
+      <div class="icon-card" title="cloud-upload">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#cloud-upload"/></svg>
+        <span class="icon-name">cloud-upload</span>
+      </div>
+      <div class="icon-card" title="cloud-download">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#cloud-download"/></svg>
+        <span class="icon-name">cloud-download</span>
+      </div>
+    </div>
+  </div>
+
+    <div class="section">
+    <div class="section-title">通讯</div>
+    <div class="grid">
+      <div class="icon-card" title="send">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#send"/></svg>
+        <span class="icon-name">send</span>
+      </div>
+      <div class="icon-card" title="message">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#message"/></svg>
+        <span class="icon-name">message</span>
+      </div>
+      <div class="icon-card" title="mail">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#mail"/></svg>
+        <span class="icon-name">mail</span>
+      </div>
+      <div class="icon-card" title="phone">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#phone"/></svg>
+        <span class="icon-name">phone</span>
+      </div>
+      <div class="icon-card" title="bookmark">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#bookmark"/></svg>
+        <span class="icon-name">bookmark</span>
+      </div>
+      <div class="icon-card" title="share">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#share"/></svg>
+        <span class="icon-name">share</span>
+      </div>
+      <div class="icon-card" title="link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#link"/></svg>
+        <span class="icon-name">link</span>
+      </div>
+      <div class="icon-card" title="flag">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#flag"/></svg>
+        <span class="icon-name">flag</span>
+      </div>
+      <div class="icon-card" title="heart">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#heart"/></svg>
+        <span class="icon-name">heart</span>
+      </div>
+      <div class="icon-card" title="star">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#star"/></svg>
+        <span class="icon-name">star</span>
+      </div>
+    </div>
+  </div>
+
+    <div class="section">
+    <div class="section-title">状态/反馈</div>
+    <div class="grid">
+      <div class="icon-card" title="loader">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#loader"/></svg>
+        <span class="icon-name">loader</span>
+      </div>
+      <div class="icon-card" title="zap">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#zap"/></svg>
+        <span class="icon-name">zap</span>
+      </div>
+      <div class="icon-card" title="activity">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#activity"/></svg>
+        <span class="icon-name">activity</span>
+      </div>
+      <div class="icon-card" title="trending-up">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#trending-up"/></svg>
+        <span class="icon-name">trending-up</span>
+      </div>
+      <div class="icon-card" title="trending-down">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#trending-down"/></svg>
+        <span class="icon-name">trending-down</span>
+      </div>
+      <div class="icon-card" title="filter">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#filter"/></svg>
+        <span class="icon-name">filter</span>
+      </div>
+      <div class="icon-card" title="sort-asc">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#sort-asc"/></svg>
+        <span class="icon-name">sort-asc</span>
+      </div>
+      <div class="icon-card" title="sort-desc">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#sort-desc"/></svg>
+        <span class="icon-name">sort-desc</span>
+      </div>
+      <div class="icon-card" title="grid">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#grid"/></svg>
+        <span class="icon-name">grid</span>
+      </div>
+      <div class="icon-card" title="list">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#list"/></svg>
+        <span class="icon-name">list</span>
+      </div>
+      <div class="icon-card" title="sidebar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#sidebar"/></svg>
+        <span class="icon-name">sidebar</span>
+      </div>
+      <div class="icon-card" title="maximize">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#maximize"/></svg>
+        <span class="icon-name">maximize</span>
+      </div>
+      <div class="icon-card" title="minimize">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#minimize"/></svg>
+        <span class="icon-name">minimize</span>
+      </div>
+      <div class="icon-card" title="zoom-in">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#zoom-in"/></svg>
+        <span class="icon-name">zoom-in</span>
+      </div>
+      <div class="icon-card" title="zoom-out">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#zoom-out"/></svg>
+        <span class="icon-name">zoom-out</span>
+      </div>
+      <div class="icon-card" title="expand">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#expand"/></svg>
+        <span class="icon-name">expand</span>
+      </div>
+      <div class="icon-card" title="compress">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#compress"/></svg>
+        <span class="icon-name">compress</span>
+      </div>
+      <div class="icon-card" title="external-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#external-link"/></svg>
+        <span class="icon-name">external-link</span>
+      </div>
+      <div class="icon-card" title="clock">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#clock"/></svg>
+        <span class="icon-name">clock</span>
+      </div>
+      <div class="icon-card" title="calendar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#calendar"/></svg>
+        <span class="icon-name">calendar</span>
+      </div>
+      <div class="icon-card" title="folder">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#folder"/></svg>
+        <span class="icon-name">folder</span>
+      </div>
+      <div class="icon-card" title="folder-open">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#folder-open"/></svg>
+        <span class="icon-name">folder-open</span>
+      </div>
+      <div class="icon-card" title="file">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#file"/></svg>
+        <span class="icon-name">file</span>
+      </div>
+      <div class="icon-card" title="file-text">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#file-text"/></svg>
+        <span class="icon-name">file-text</span>
+      </div>
+      <div class="icon-card" title="image">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#image"/></svg>
+        <span class="icon-name">image</span>
+      </div>
+      <div class="icon-card" title="music">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#music"/></svg>
+        <span class="icon-name">music</span>
+      </div>
+      <div class="icon-card" title="play">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#play"/></svg>
+        <span class="icon-name">play</span>
+      </div>
+      <div class="icon-card" title="pause">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#pause"/></svg>
+        <span class="icon-name">pause</span>
+      </div>
+      <div class="icon-card" title="skip-back">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#skip-back"/></svg>
+        <span class="icon-name">skip-back</span>
+      </div>
+      <div class="icon-card" title="skip-forward">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#skip-forward"/></svg>
+        <span class="icon-name">skip-forward</span>
+      </div>
+      <div class="icon-card" title="repeat">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#repeat"/></svg>
+        <span class="icon-name">repeat</span>
+      </div>
+      <div class="icon-card" title="shuffle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#shuffle"/></svg>
+        <span class="icon-name">shuffle</span>
+      </div>
+      <div class="icon-card" title="volume">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#volume"/></svg>
+        <span class="icon-name">volume</span>
+      </div>
+      <div class="icon-card" title="volume-x">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#volume-x"/></svg>
+        <span class="icon-name">volume-x</span>
+      </div>
+      <div class="icon-card" title="maximize-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#maximize-2"/></svg>
+        <span class="icon-name">maximize-2</span>
+      </div>
+      <div class="icon-card" title="log-out">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#log-out"/></svg>
+        <span class="icon-name">log-out</span>
+      </div>
+      <div class="icon-card" title="log-in">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#log-in"/></svg>
+        <span class="icon-name">log-in</span>
+      </div>
+    </div>
+  </div>
+
+    <div class="section">
+    <div class="section-title">安全/奖励</div>
+    <div class="grid">
+      <div class="icon-card" title="shield">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#shield"/></svg>
+        <span class="icon-name">shield</span>
+      </div>
+      <div class="icon-card" title="shield-check">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#shield-check"/></svg>
+        <span class="icon-name">shield-check</span>
+      </div>
+      <div class="icon-card" title="award">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#award"/></svg>
+        <span class="icon-name">award</span>
+      </div>
+      <div class="icon-card" title="gift">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#gift"/></svg>
+        <span class="icon-name">gift</span>
+      </div>
+      <div class="icon-card" title="target">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#target"/></svg>
+        <span class="icon-name">target</span>
+      </div>
+      <div class="icon-card" title="crosshair">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#crosshair"/></svg>
+        <span class="icon-name">crosshair</span>
+      </div>
+    </div>
+  </div>
+
+    <div class="section">
+    <div class="section-title">数据/媒体</div>
+    <div class="grid">
+      <div class="icon-card" title="pie-chart">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#pie-chart"/></svg>
+        <span class="icon-name">pie-chart</span>
+      </div>
+      <div class="icon-card" title="bar-chart">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#bar-chart"/></svg>
+        <span class="icon-name">bar-chart</span>
+      </div>
+      <div class="icon-card" title="scissors">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#scissors"/></svg>
+        <span class="icon-name">scissors</span>
+      </div>
+      <div class="icon-card" title="paperclip">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#paperclip"/></svg>
+        <span class="icon-name">paperclip</span>
+      </div>
+      <div class="icon-card" title="shopping-cart">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#shopping-cart"/></svg>
+        <span class="icon-name">shopping-cart</span>
+      </div>
+      <div class="icon-card" title="credit-card">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#credit-card"/></svg>
+        <span class="icon-name">credit-card</span>
+      </div>
+      <div class="icon-card" title="sun">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#sun"/></svg>
+        <span class="icon-name">sun</span>
+      </div>
+      <div class="icon-card" title="moon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#moon"/></svg>
+        <span class="icon-name">moon</span>
+      </div>
+      <div class="icon-card" title="thermometer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#thermometer"/></svg>
+        <span class="icon-name">thermometer</span>
+      </div>
+      <div class="icon-card" title="droplet">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#droplet"/></svg>
+        <span class="icon-name">droplet</span>
+      </div>
+      <div class="icon-card" title="wind">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#wind"/></svg>
+        <span class="icon-name">wind</span>
+      </div>
+      <div class="icon-card" title="layers">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#layers"/></svg>
+        <span class="icon-name">layers</span>
+      </div>
+      <div class="icon-card" title="package">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs/><use href="#package"/></svg>
+        <span class="icon-name">package</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
